@@ -13,7 +13,7 @@
     "uploadCartridge": "sgmf-scripts --uploadCartridge plugin_mail_job_step"
   },
   "devDependencies": {
-    "eslint": "^3.2.2",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^5.0.1",
     "eslint-plugin-import": "^1.12.0",
     "stylelint": "^7.1.0",
