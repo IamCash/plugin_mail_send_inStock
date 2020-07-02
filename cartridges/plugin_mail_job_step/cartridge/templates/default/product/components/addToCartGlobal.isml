@@ -1,0 +1,55 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+        <button class="add-to-cart btn btn-primary"
+                data-toggle="modal" data-target="#chooseBonusProductModal"
+                data-pid="${product.id}"
+                ${!product.readyToOrder || !product.available ? "disabled" : ""}>
+            <i class="fa fa-shopping-bag"></i>
+            ${Resource.msg('button.addtocart', 'common', null)}
+        </button>
+        <button id="myBtn" class="notifyme btn btn-primary" data-pid="${product.id}" ${(!product.readyToOrder || !product.available) ? "disabled" : ""}>
+           ${Resource.msg('Notify Me', 'common', null)}
+        </button>
+        <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="myModalClose">&times;</span>
+                      <div class="row justify-content-center equal-height">
+                            <div class="col-sm-8 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="login-form-nav">
+                                            <form action="" method="POST" class="newsletter-form" name="signupForm" id="signupForm">
+                                                
+                                                <iscomment> <div class="row contact-us-comment">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <label class="form-control-label" for="contact-comment">
+                                                                ${Resource.msg('label.input.contact-us-headline1', 'contactUs', 'contact-us')} {product}
+                                                                ${Resource.msg('label.input.contact-us-headline2', 'contactUs', 'contact-us')}
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div> </iscomment>
+
+                                                <input type="hidden" id="skuId" value="${product.id}" name="skuId" class="myprodid"/>
+                                                <div class="form-group required">
+                                                    <label class="form-control-label">
+                                                        Email
+                                                    </label>
+                                                    <input type="input" class="form-control" id="newsletter-form-email" name="email" required aria-required="true" maxlength="50" pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$">
+                                                    <div class="invalid-feedback"></div>
+                                                </div>
+                                                <button type="submit" class="btn btn-block btn-primary">${Resource.msg('button.form.notifyme', 'NotifyMe', 'Notify Me')}</button>
+                                            </form>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+	                  </div>
+
+                </div>
+        </div>
+    </div>
+</div>

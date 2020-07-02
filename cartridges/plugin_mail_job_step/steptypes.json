@@ -1,0 +1,49 @@
+{
+  "step-types":
+  {
+    "script-module-step":
+    [
+      {
+        "@type-id":"custom.SendMailInStockProduct",
+        "@supports-parallel-execution":"false",
+        "@supports-site-context":"true",
+        "@supports-organization-context":"false",
+        "description":"This script sends the mail to the customer if product is in stock. It runs in site scope.",
+        "module":"plugin_mail_job_step/cartridge/scripts/steps/sendMailToUser.js",
+        "function":"sendMails",
+        "transactional":"true",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"CustomObjectType",
+              "@type":"string",
+              "@required":"true",
+              "description":"The Custom Object type to send mail to users."
+            }
+          ]
+        },
+        "status-codes": 
+        {
+          "status": 
+          [
+              {
+                  "@code": "ERROR",
+                  "description": "Used when the step failed with an error."
+              },
+              {
+                  "@code": "FINISHED",
+      			  "description": "Used when the step finished successfully."
+              },
+              {
+                  "@code": "FINISHED_WITH_WARNINGS",
+      			  "description": "Used when the step finished with warnings."
+              }
+          ]
+        }
+      }
+    ]
+  }
+}

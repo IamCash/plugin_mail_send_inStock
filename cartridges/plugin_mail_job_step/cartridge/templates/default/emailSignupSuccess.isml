@@ -1,0 +1,6 @@
+<isdecorate template="common/layout/page">
+	<h3>
+		We'll let You Know Once Product is Available!
+	</h3>
+	Back to <a href="${pdict.homeUrl}">Home Page</a>.
+</isdecorate>

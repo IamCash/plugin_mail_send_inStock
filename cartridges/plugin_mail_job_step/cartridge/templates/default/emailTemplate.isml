@@ -1,0 +1,13 @@
+<iscontent type="text/html" charset="UTF-8">
+<html>
+   <body>
+      <div style="text-align:center;">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/83/Salesforce_logo.svg/1200px-Salesforce_logo.svg.png" alt="Salesforce"style="width:100px;height:70px;">
+         <h3 style="color:black;">Dear Customer!</h3>
+         <h1 style ="color:#09b526;">The ${pdict.productName} is available now.</h1>
+         <button type="button" class="btn btn-primary btn-block" style="background-color: #ffbf00;font-size: 18px;border-radius: 6px;padding: 8px 50px;"><a href=${pdict.url} style="text-decoration:none; color:#f7fafa;">Click to Buy</a></button
+        <p style="color:black;">We look forward to seeing you again!!<p>
+        <p style="color:black;">The Salesforce Commerce Team</p>
+      </div>
+   </body>
+</html>
